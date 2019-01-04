@@ -1,0 +1,23 @@
+{
+  "name": "chordequal",
+  "version": "1.0.0",
+  "description": "Get easier chords equivalent to more complex chords !",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emmanuelsegard/chordequal.git"
+  },
+  "keywords": [
+    "music",
+    "chord"
+  ],
+  "author": "Emmanuel Ségard",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emmanuelsegard/chordequal/issues"
+  },
+  "homepage": "https://github.com/emmanuelsegard/chordequal#readme"
+}
