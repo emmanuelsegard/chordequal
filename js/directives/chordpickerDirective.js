@@ -367,28 +367,28 @@ angular.module('chordpicker', [])
                     var alt = $scope.alteration;
                     var type = $scope.chordType;
                     var semitone = (alt === "b") ?
-                        semitones[parseInt(semitones.indexOf(root) - 1).mod(11)] : (alt === "#") ?
-                            semitones[parseInt(semitones.indexOf(root) + 1).mod(11)] : root;
+                        semitones[parseInt(semitones.indexOf(root) - 1).mod(12)] : (alt === "#") ?
+                            semitones[parseInt(semitones.indexOf(root) + 1).mod(12)] : root;
                     var eqChord;
         
                     switch (type) {
                         case "m7":
-                            eqChord = semitones[parseInt(semitones.indexOf(semitone) + 3).mod(11)];
+                            eqChord = semitones[parseInt(semitones.indexOf(semitone) + 3).mod(12)];
                             break;
                         case "m7/9":
-                            eqChord = semitones[parseInt(semitones.indexOf(semitone) + 3).mod(11)] + "Maj7";
+                            eqChord = semitones[parseInt(semitones.indexOf(semitone) + 3).mod(12)] + "Maj7";
                             break;
                         case "Maj7":
-                            eqChord = semitones[parseInt(semitones.indexOf(semitone) + 4).mod(11)] + "m";
+                            eqChord = semitones[parseInt(semitones.indexOf(semitone) + 4).mod(12)] + "m";
                             break;
                         case "Maj7/9":
-                            eqChord = semitones[parseInt(semitones.indexOf(semitone) + 4).mod(11)] + "m7";
+                            eqChord = semitones[parseInt(semitones.indexOf(semitone) + 4).mod(12)] + "m7";
                             break;
                         case "7sus4/9":
-                            eqChord = semitones[parseInt(semitones.indexOf(semitone) - 2).mod(11)];
+                            eqChord = semitones[parseInt(semitones.indexOf(semitone) - 2).mod(12)];
                             break;
                         case "7sus4/9/13":
-                            eqChord = semitones[parseInt(semitones.indexOf(semitone) - 2).mod(11)] + "Maj7";
+                            eqChord = semitones[parseInt(semitones.indexOf(semitone) - 2).mod(12)] + "Maj7";
                             break;
                         default:
                             eqChord = root + alt + type;
