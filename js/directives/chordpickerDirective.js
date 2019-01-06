@@ -318,7 +318,7 @@ angular.module('chordpicker', [])
 
                 var notes = ["C", "D", "E", "F", "G", "A", "B"];
                 var alterations = ["","b","#"]
-                var chordTypes= ["m7","Maj7","m7/9", "Maj7/9"];
+                var chordTypes= ["m7","m7/9","Maj7","Maj7/9","7sus4/9","7sus4/9/13"];
                 var rootNote = $scope.rootNote;
                 var alteration = $scope.alteration;
                 var chordType = $scope.chordType;
@@ -383,6 +383,12 @@ angular.module('chordpicker', [])
                             break;
                         case "Maj7/9":
                             eqChord = semitones[parseInt(semitones.indexOf(semitone) + 4).mod(11)] + "m7";
+                            break;
+                        case "7sus4/9":
+                            eqChord = semitones[parseInt(semitones.indexOf(semitone) - 2).mod(11)];
+                            break;
+                        case "7sus4/9/13":
+                            eqChord = semitones[parseInt(semitones.indexOf(semitone) - 2).mod(11)] + "Maj7";
                             break;
                         default:
                             eqChord = root + alt + type;
