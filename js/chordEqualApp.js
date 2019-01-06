@@ -1,3 +1,3 @@
 (function (params) {
-    angular.module("chordEqualApp", []);
+    angular.module("chordEqualApp", ['chordpicker']);
 })();

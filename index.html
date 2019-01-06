@@ -6,6 +6,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -16,27 +17,16 @@
     <header class="w3-container w3-light-grey w3-padding-16">
         <h1>chordequal</h1>
     </header>
-    <div class="w3-container w3-white w3-padding-16">
-        <p>{{equalChord}}</p>
+    <div class="w3-container w3-white w3-padding-8 w3-center">
+        <p style="font-size:xx-large;">{{equalChord}}</p>
     </div>
-    <div class="w3-container w3-light-grey w3-padding-16">
-        <div class="w3-row w3-margin-top">
-            <div class="w3-col s10">
-                <select name="rootNote" ng-change="onChordChanged()" ng-model="rootNote" class="w3-input w3-border w3-padding">
-                    <option ng-repeat="note in notes" value="{{note}}">{{note}}</option>
-                </select>
-                <select name="alteration" ng-change="onChordChanged()" ng-model="alteration" class="w3-input w3-border w3-padding">
-                    <option ng-repeat="alt in alterations" value="{{alt}}">{{alt}}</option>
-                </select>
-                <select name="chordType" ng-change="onChordChanged()" ng-model="chordType" class="w3-input w3-border w3-padding">
-                    <option ng-repeat="type in chordTypes" value="{{type}}">{{type}}</option>
-                </select>
-            </div>
-        </div>
+    <div class="w3-container w3-light-grey w3-padding-16 w3-center">
+        <chordpicker equal-chord='equalChord' root-note='rootNote' alteration='alteration' chord-type='chordType'></chordpicker>
     </div>
 
     <script src="js/chordEqualApp.js"></script>
     <script src="js/chordEqualCtrl.js"></script>
+    <script src="js/directives/chordpickerDirective.js"></script>
 </body>
 
 </html>

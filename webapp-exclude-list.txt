@@ -1,0 +1,4 @@
+webapp-exclude-list.txt
+.git
+package.json
+README.md
